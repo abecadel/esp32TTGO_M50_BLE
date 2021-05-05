@@ -67,7 +67,7 @@ bool CanonBLE::connect_to_device() {
             // Acquire reference to BLE characteristics
             pRemoteCharacteristic_Pairing = pRemoteService->getCharacteristic(PAIRING_SERVICE);
             pRemoteCharacteristic_Trigger = pRemoteService->getCharacteristic(SHUTTER_CONTROL_SERVICE);
-            if ((pRemoteCharacteristic_Pairing != nullptr) && (pRemoteCharacteristic_Pairing != nullptr))
+            if (pRemoteCharacteristic_Pairing != nullptr)
             {
                 // Send request on pairing service from external device
                 String device_name_ = " " + device_name + " "; //Pairing message to send
